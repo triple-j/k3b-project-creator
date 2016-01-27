@@ -37,7 +37,8 @@ class K3bProject {
 
         $this->project_name = basename($folder);
 
-        $this->dom->querySelector('header volume_id')->nodeValue = $this->project_name;
+        $volumeNameElement = $this->dom->querySelector('header volume_id');
+        $volumeNameElement->replaceChild($this->document->createTextNode($this->project_name), $volumeNameElement->firstChild);
 
         $projectElement = $this->dom->querySelector('k3b_data_project');
         $filesElement = $this->document->createElement('files');
@@ -115,19 +116,23 @@ class K3bProject {
 
             if (is_dir($fullPath)) {
                 $dirElement = $dom->createElement('directory');
-                $dirAttrName = $dom->createAttribute('name');
-                $dirAttrName->value = $file;
-                $dirElement->appendChild($dirAttrName);
                 $element->appendChild($dirElement);
+
+                $dirAttrName = $dom->createAttribute('name');
+                $dirAttrName->appendChild($dom->createTextNode($file));
+                $dirElement->appendChild($dirAttrName);
+
                 $this->addDirectory($fullPath, $dirElement);
             } else {
                 $fileElement = $dom->createElement('file');
-                $fileAttrName = $dom->createAttribute('name');
-                $fileAttrName->value = $file;
-                $fileElement->appendChild($fileAttrName);
                 $element->appendChild($fileElement);
 
-                $urlElement = $dom->createElement('url', $fullPath);
+                $fileAttrName = $dom->createAttribute('name');
+                $fileAttrName->appendChild($dom->createTextNode($file));
+                $fileElement->appendChild($fileAttrName);
+
+                $urlElement = $dom->createElement('url');
+                $urlElement->appendChild($dom->createTextNode($fullPath));
                 $fileElement->appendChild($urlElement);
             }
         }
