@@ -83,7 +83,10 @@ class K3bProject {
         $zip->addFile($data_file, basename($data_file));
         $zip->close();
 
-        //TODO: clean up temporary files
+        // clean up temporary files
+        unlink($mime_file);
+        unlink($data_file);
+        rmdir($temp_dir);
     }
 
 
