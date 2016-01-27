@@ -1,0 +1,26 @@
+{
+    "name": "trejeraos/k3b-project-creator",
+    "description": "Create K3b project files",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeremie J. Jarosh",
+            "email": "jeremie@jarosh.org"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/triple-j/DOMSelector.git"
+        }
+    ],
+    "require": {
+        "trejeraos/dom-selector": "~0.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "trejeraos\\": "src/"
+        }
+    }
+}

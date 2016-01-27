@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE k3b_data_project>
+<k3b_data_project>
+<general>
+<writing_mode>auto</writing_mode>
+<dummy activated="no"/>
+<on_the_fly activated="no"/>
+<only_create_images activated="no"/>
+<remove_images activated="yes"/>
+</general>
+<options>
+<rock_ridge activated="yes"/>
+<joliet activated="no"/>
+<udf activated="yes"/>
+<joliet_allow_103_characters activated="yes"/>
+<iso_allow_lowercase activated="no"/>
+<iso_allow_period_at_begin activated="no"/>
+<iso_allow_31_char activated="yes"/>
+<iso_omit_version_numbers activated="no"/>
+<iso_omit_trailing_period activated="no"/>
+<iso_max_filename_length activated="no"/>
+<iso_relaxed_filenames activated="no"/>
+<iso_no_iso_translate activated="no"/>
+<iso_allow_multidot activated="no"/>
+<iso_untranslated_filenames activated="no"/>
+<follow_symbolic_links activated="yes"/>
+<create_trans_tbl activated="no"/>
+<hide_trans_tbl activated="no"/>
+<iso_level>3</iso_level>
+<discard_symlinks activated="no"/>
+<discard_broken_symlinks activated="no"/>
+<preserve_file_permissions activated="no"/>
+<do_not_cache_inodes activated="yes"/>
+<whitespace_treatment>noChange</whitespace_treatment>
+<whitespace_replace_string>_</whitespace_replace_string>
+<data_track_mode>auto</data_track_mode>
+<multisession>auto</multisession>
+<verify_data activated="yes"/>
+</options>
+<header>
+<volume_id>[Disc Name]</volume_id>
+<volume_set_id></volume_set_id>
+<volume_set_size>1</volume_set_size>
+<volume_set_number>1</volume_set_number>
+<system_id>LINUX</system_id>
+<application_id>K3B THE CD KREATOR (C) 1998-2010 SEBASTIAN TRUEG AND MICHAL MALEK</application_id>
+<publisher></publisher>
+<preparer></preparer>
+</header>
+</k3b_data_project>
