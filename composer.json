@@ -9,18 +9,12 @@
             "email": "jeremie@jarosh.org"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/triple-j/DOMSelector.git"
-        }
-    ],
-    "require": {
-        "trejeraos/dom-selector": "~0.3.0"
-    },
     "autoload": {
         "psr-4": {
             "trejeraos\\": "src/"
         }
+    },
+    "require": {
+        "trejeraos/dom-selector": "^1.0"
     }
 }
